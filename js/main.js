@@ -19,7 +19,6 @@ $(function() {
   });
 
 
- 
   
  
   // Contact form
@@ -134,36 +133,7 @@ $(function() {
     },
   });
 
-  // slider blog
-  var swiper = new Swiper('.art-blog-slider', {
-    slidesPerView: 3,
-    spaceBetween: 30,
-    speed: 1400,
-    autoplay: {
-      delay: 4000,
-    },
-    autoplaySpeed: 5000,
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
-    navigation: {
-      nextEl: '.art-blog-swiper-next',
-      prevEl: '.art-blog-swiper-prev',
-    },
-    breakpoints: {
-      1500: {
-        slidesPerView: 3,
-      },
-      1200: {
-        slidesPerView: 2,
-      },
-      992: {
-        slidesPerView: 1,
-      },
-    },
-  });
-
+ 
   $('[data-fancybox="gallery"]').fancybox({
     animationEffect: "zoom-in-out",
     animationDuration: 600,
@@ -260,31 +230,7 @@ $(function() {
       continuousScrolling: true,
     });
 
-    $("#form").submit(function() {
-      $.ajax({
-        type: "POST",
-        url: "mail.php",
-        data: $(this).serialize()
-      }).done(function() {
 
-        var tl = anime.timeline({
-          easing: 'easeOutExpo',
-        });
-
-        tl
-          .add({
-            targets: '.art-submit',
-            opacity: 0,
-            scale: .5,
-          })
-          .add({
-            targets: '.art-success',
-            scale: 1,
-            height: '45px',
-          })
-      });
-      return false;
-    });
 
     // Masonry Grid
     $('.art-grid').isotope({
@@ -305,37 +251,7 @@ $(function() {
     });
 
     
-    // slider testimonials
-    var swiper = new Swiper('.art-testimonial-slider', {
-      slidesPerView: 3,
-      spaceBetween: 30,
-      speed: 1400,
-      autoplay: false,
-      autoplaySpeed: 5000,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-      navigation: {
-        nextEl: '.art-testi-swiper-next',
-        prevEl: '.art-testi-swiper-prev',
-      },
-      breakpoints: {
-        1500: {
-          slidesPerView: 2,
-        },
-        1200: {
-          slidesPerView: 2,
-        },
-        992: {
-          slidesPerView: 2,
-        },
-        768: {
-          slidesPerView: 1,
-        }
-      },
-    });
-
+  
     // slider works
     var swiper = new Swiper('.art-works-slider', {
       slidesPerView: 3,
@@ -366,36 +282,7 @@ $(function() {
       },
     });
 
-    // slider blog
-    var swiper = new Swiper('.art-blog-slider', {
-      slidesPerView: 3,
-      spaceBetween: 30,
-      speed: 1400,
-      autoplay: {
-        delay: 4000,
-      },
-      autoplaySpeed: 5000,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-      navigation: {
-        nextEl: '.art-blog-swiper-next',
-        prevEl: '.art-blog-swiper-prev',
-      },
-      breakpoints: {
-        1500: {
-          slidesPerView: 3,
-        },
-        1200: {
-          slidesPerView: 3,
-        },
-        992: {
-          slidesPerView: 1,
-        },
-      },
-    });
-
+   
     $('[data-fancybox="gallery"]').fancybox({
       animationEffect: "zoom-in-out",
       animationDuration: 600,
