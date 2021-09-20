@@ -515,7 +515,7 @@
                     <div class="art-a art-card">
 
                       <!-- contact form -->
-                      <form id="form" class="art-contact-form">
+                      <form action="POST" data-netlify="true" id="form" class="art-contact-form">
                         <!-- form field -->
                         <div class="art-form-field">
                           <!-- name input -->
@@ -538,6 +538,11 @@
                           <textarea id="message" name="text" class="art-input" placeholder="Message" required></textarea>
                           <!-- label -->
                           <label for="message"><i class="far fa-envelope"></i></label>
+                        </div>
+                         <div class="art-form-field">
+                          <!-- captcha textarea -->
+                          <div data-netlify-recaptcha="true">
+                            </div>
                         </div>
                         <!-- form field end -->
                         <!-- button -->
